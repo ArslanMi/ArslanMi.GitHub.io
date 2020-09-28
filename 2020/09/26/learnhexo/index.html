@@ -27,11 +27,16 @@
 <meta property="og:site_name" content="Xianbin的博客">
 <meta property="og:description" content="hexo学习笔记，不定时更新。">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2020/09/26/learnhexo/h1.png">
+<meta property="og:image" content="http://example.com/2020/09/26/learnhexo/h2.png">
+<meta property="og:image" content="http://example.com/2020/09/26/learnhexo/h3.png">
+<meta property="og:image" content="http://example.com/2020/09/26/learnhexo/h4.png">
 <meta property="article:published_time" content="2020-09-26T11:59:13.000Z">
-<meta property="article:modified_time" content="2020-09-28T10:47:14.688Z">
+<meta property="article:modified_time" content="2020-09-28T14:16:22.203Z">
 <meta property="article:author" content="弭宪斌">
 <meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2020/09/26/learnhexo/h1.png">
 
 <link rel="canonical" href="http://example.com/2020/09/26/learnhexo/">
 
@@ -187,7 +192,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-09-28 18:47:14" itemprop="dateModified" datetime="2020-09-28T18:47:14+08:00">2020-09-28</time>
+                <time title="修改时间：2020-09-28 22:16:22" itemprop="dateModified" datetime="2020-09-28T22:16:22+08:00">2020-09-28</time>
               </span>
 
           
@@ -224,30 +229,56 @@
       
         <p>hexo学习笔记，不定时更新。</p>
 <a id="more"></a>
-<h1 id="本地引用"><a href="#本地引用" class="headerlink" title="本地引用"></a>本地引用</h1><h2 id="绝对路径"><a href="#绝对路径" class="headerlink" title="绝对路径"></a>绝对路径</h2><p>当博客只用到少量图片时，可以将图片统一放在<code>source/images</code>文件夹中，通过markdown语法访问。</p>
+<p><strong>hexo version</strong></p>
+<blockquote>
+<p><code>hexo: 5.2.0 </code></p>
+</blockquote>
+<br>
+
+<h1 id="图片引用"><a href="#图片引用" class="headerlink" title="图片引用"></a>图片引用</h1><h2 id="本地引用"><a href="#本地引用" class="headerlink" title="本地引用"></a>本地引用</h2><h3 id="绝对路径"><a href="#绝对路径" class="headerlink" title="绝对路径"></a>绝对路径</h3><p>当博客只用到少量图片时，可以将图片统一放在<code>source/images</code>文件夹中，通过markdown语法访问。</p>
 <blockquote>
 <p><code>![](/images/name.jpg)</code></p>
 </blockquote>
 <p>图片既可以在首页看到，又可以在正文中看到。</p>
-<h1 id="相对路径"><a href="#相对路径" class="headerlink" title="相对路径"></a>相对路径</h1><p>图片可以放在文章同一目录对应的文件夹中，通过配置<code>_config.yml</code>来生成。</p>
+<h3 id="相对路径"><a href="#相对路径" class="headerlink" title="相对路径"></a>相对路径</h3><p>图片可以放在文章同一目录对应的文件夹中，通过配置<code>_config.yml</code>来生成。</p>
 <blockquote>
 <p><code>post_asset_folder:true</code></p>
 </blockquote>
-<p>当<code>$ hexo new post_name</code>生成新文章时，在<code>source/_posts</code>中会生成文章<code>post_name.md</code>和资源文件夹<code>post_name</code>。将资源放入文件夹后就可以用相对路径引用了</p>
+<p>当<code>$ hexo new [post] &lt;name&gt;</code>生成新文章时，在<code>source/_posts</code>中会生成文章<code>post_name.md</code>和资源文件夹<code>post_name</code>。将资源放入文件夹后就可以用相对路径引用了</p>
 <blockquote>
 <p><code>![](image.jpg)</code></p>
 </blockquote>
-<p>这样图片只能在文章中显示，无法在首页中显示。</p>
-<p>需要<strong>标签插件语法</strong></p>
-<blockquote>
-<p><code>{% asset)img image.jpg This is an image %}</code></p>
+<h2 id="网络引用"><a href="#网络引用" class="headerlink" title="网络引用"></a>网络引用</h2><blockquote>
+<p><code>![](image website link)</code></p>
 </blockquote>
-<h1 id="网络引用"><a href="#网络引用" class="headerlink" title="网络引用"></a>网络引用</h1><blockquote>
-<p><code>![](https://cdnb.artstation.com/p/assets/images/images/022/834/851/4k/pablo-carpio-columns4.jpg?1576857892)</code></p>
+<br>
+
+<h1 id="空行"><a href="#空行" class="headerlink" title="空行"></a>空行</h1><blockquote>
+<p><code>&lt;br /&gt;</code></p>
 </blockquote>
-<h1 id="多个标签"><a href="#多个标签" class="headerlink" title="多个标签"></a>多个标签</h1><blockquote>
+<br>
+
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><h2 id="添加多个标签"><a href="#添加多个标签" class="headerlink" title="添加多个标签"></a>添加多个标签</h2><blockquote>
 <p>[aaa, bbb]</p>
 </blockquote>
+<br>
+
+<h1 id="评论系统"><a href="#评论系统" class="headerlink" title="评论系统"></a>评论系统</h1><h2 id="Valine"><a href="#Valine" class="headerlink" title="Valine"></a>Valine</h2><p><a target="_blank" rel="noopener" href="https://valine.js.org/">Valine</a> 诞生于2017年8月7日，是一款基于<a target="_blank" rel="noopener" href="https://leancloud.cn/">LeanCloud</a>的快速、简洁且高效的无后端评论系统。</p>
+<p>首先进入<a target="_blank" rel="noopener" href="https://leancloud.cn/">LeanCloud</a>官网，点击注册，注册完毕后完成<strong>邮箱验证</strong>和<strong>身份识别</strong>（需要姓名、身份证号，然后打开支付宝扫描验证）。</p>
+<p>验证完毕后进入控制台，点击 <strong>应用</strong> - <strong>创建应用</strong> ，选择<strong>开发版</strong>。</p>
+<p><img src="h1.png"></p>
+<p>创建完毕后，点击<strong>设置</strong>按钮，进入设置界面。</p>
+<p>打开<strong>应用keys</strong>，这里显示的<strong>AppID</strong>和<strong>AppKey</strong>我们一会就会用到。</p>
+<p><img src="h2.png"></p>
+<p>打开hexo的配置文件<code>_config.yml</code>，搜索<code>Valine</code>。</p>
+<p><img src="h3.png"></p>
+<p>将<code>enable: false</code>改为<code>true</code>，填入我们刚才的得到的两串数值。<br><code>placeholder:</code>可以设置访客在评论栏看到的消息。<br><code>guest_info:</code>可以设置访客可以留下哪些信息</p>
+<p>重新生成一下网页</p>
+<blockquote>
+<p><code>hexo clean</code><br><code>hexo g</code><br><code>hexo d</code></p>
+</blockquote>
+<p>现在可以在网页留言啦！</p>
+<p>可以去<strong>LeanCloud</strong>控制台-应用处管理留言<br><img src="h4.png"></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -350,7 +381,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0%E5%BC%95%E7%94%A8"><span class="nav-number">1.</span> <span class="nav-text">本地引用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%9D%E5%AF%B9%E8%B7%AF%E5%BE%84"><span class="nav-number">1.1.</span> <span class="nav-text">绝对路径</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84"><span class="nav-number">2.</span> <span class="nav-text">相对路径</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E5%BC%95%E7%94%A8"><span class="nav-number">3.</span> <span class="nav-text">网络引用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%9A%E4%B8%AA%E6%A0%87%E7%AD%BE"><span class="nav-number">4.</span> <span class="nav-text">多个标签</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%BE%E7%89%87%E5%BC%95%E7%94%A8"><span class="nav-number">1.</span> <span class="nav-text">图片引用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0%E5%BC%95%E7%94%A8"><span class="nav-number">1.1.</span> <span class="nav-text">本地引用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%9D%E5%AF%B9%E8%B7%AF%E5%BE%84"><span class="nav-number">1.1.1.</span> <span class="nav-text">绝对路径</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84"><span class="nav-number">1.1.2.</span> <span class="nav-text">相对路径</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E5%BC%95%E7%94%A8"><span class="nav-number">1.2.</span> <span class="nav-text">网络引用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A9%BA%E8%A1%8C"><span class="nav-number">2.</span> <span class="nav-text">空行</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A0%87%E7%AD%BE"><span class="nav-number">3.</span> <span class="nav-text">标签</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E5%A4%9A%E4%B8%AA%E6%A0%87%E7%AD%BE"><span class="nav-number">3.1.</span> <span class="nav-text">添加多个标签</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F"><span class="nav-number">4.</span> <span class="nav-text">评论系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Valine"><span class="nav-number">4.1.</span> <span class="nav-text">Valine</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
